@@ -38,7 +38,7 @@ class MainActivity : AppCompatActivity() {
 
         //Autocomplete Text
         val countriesList = resources.getStringArray(R.array.countries)
-        var arrayAdapter =
+        val arrayAdapter =
             ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, countriesList)
         autoCompleteTextView.setAdapter(arrayAdapter)
 
@@ -53,8 +53,8 @@ class MainActivity : AppCompatActivity() {
                 //Request Data from API
                 val myCountry = autoCompleteTextView.text.toString().trim().capitalize(Locale.ROOT)
 
-                var requestAPIData = RequestAPIData(this)
-                requestAPIData.RequestData().execute(myCountry)
+                val requestAPIData = RequestAPIData(this)
+                requestAPIData.requestData(myCountry)
 
             } else if (!isNetworkAvailable()) {
                 snackBarMessage("No Internet Connection")
