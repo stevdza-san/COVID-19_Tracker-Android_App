@@ -2,14 +2,12 @@ package com.jovanovic.stefan.covid_19tracker
 
 import android.content.Context
 import android.content.Intent
-import android.os.AsyncTask
 import android.util.Log
 import androidx.core.content.ContextCompat.startActivity
 import com.android.volley.AuthFailureError
 import com.android.volley.Response
 import com.android.volley.toolbox.StringRequest
 import com.android.volley.toolbox.Volley
-import kotlinx.android.synthetic.main.activity_main.*
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
